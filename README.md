@@ -1,46 +1,94 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<h1 align="center">
+  <img src="https://imgur.com/aPy2J3e.png" width="160">
+</h1>
+<h4 align="center">
+  This is the Front-end web of an application developed for our Fatec Graduation Work
+</h4>
+<br>
+<h2>Index</h2>
+<ul>
+  <li><a href="#group-members">Group members</a></li>
+  <li><a href="#main-libraries-used">Main libraries used</a></li>
+  <li><a href="#thanks">Thanks</a></li>
+</ul>
+<br>
+<h2 id="group-members">Group members</h2>
+<p>
+  Since the TG (acronym for <i>"Graduation Work"</i>, in Portuguese) can be developed by groups with up to 3 members, we decided to come together to develop the application proposed in our work. Thus, our group consists of:
+</p>
+<br>
+<table class="table">
+  <thead>
+    <th>Member name</th>
+    <th>Main responsibility</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/danilo-dsf">Danilo Ferreira</a></td>
+      <td>Architect, structure and develop the application back-end</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/diegods-ferreira">Diego Ferreira</a></td>
+      <td>Design, architect and develop the mobile front end of the application</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/rcoelh0">Rafael Coelho</a></td>
+      <td>Architect, structure and develop the application back-end</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<h2 id="main-libraries-used">Main libraries used</h2>
+<p>
+  As the entire ecosystem around this stack is quite vast, full of libraries ready to implement in our application and make use according to our objective, below are listed the main libraries we use:
+</p>
+<br>
+<table class="table">
+  <thead>
+    <th>Library Name</th>
+    <th>Version</th>
+    <th>What it was use for?</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>typescript</td>
+      <td>3.8.3</td>
+      <td>It was used so that we could work with data typing and thus avoid problems as the project grows</td>
+    </tr>
+    <tr>
+      <td>eslint</td>
+      <td>6.8.0</td>
+      <td rowspan="2">They were used to enforce code style and design pattern</td>
+    </tr>
+    <tr>
+      <td>prettier</td>
+      <td>2.1.2</td>
+    </tr>
+    <tr>
+      <td>axios</td>
+      <td>0.20.0</td>
+      <td>It was used to enable the app to make requests to the external API</td>
+    </tr>
+    <tr>
+      <td>styled-components</td>
+      <td>5.2.0</td>
+      <td>It was used to do all the styling of the application components</td>
+    </tr>
+    <tr>
+      <td>yup</td>
+      <td>0.29.3</td>
+      <td>It was used to perform validations on forms</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<h2 id="thanks">Thanks</h2>
+<p>
+  <b>
+    <i>
+      Thank you so much for visiting this repository!
+    </i>
+  </b>
+</p>
