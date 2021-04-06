@@ -13,7 +13,11 @@ export const Container = styled.div`
   }
 
   h1 {
+    max-width: 560px;
     margin-top: 64px;
+    margin-bottom: 24px;
+    text-align: center;
+    font-weight: normal;
   }
 
   form {

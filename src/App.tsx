@@ -1,6 +1,6 @@
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
-import React, { useCallback, useRef } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router';
 import logoImg from './assets/logo.svg';
 import { useToast } from './hooks/toast';
@@ -11,6 +11,7 @@ import * as Yup from 'yup';
 import api from './services/api';
 import getValidationErrors from './utils/getValidationErrors';
 import { FiLock } from 'react-icons/fi';
+import GlobalStyle from './globalStyles';
 
 interface ResetPasswordFormData {
   password: string;
@@ -22,6 +23,8 @@ const App = () => {
 
   const { addToast } = useToast();
   const location = useLocation();
+
+  const [showPasswordRecovery, setShowPasswordRecovery] = useState(false);
 
   const handleSubmit = useCallback(
     async (data: ResetPasswordFormData) => {
@@ -80,30 +83,58 @@ const App = () => {
     }, [addToast, location.search]
   );
 
+  useEffect(() => {
+    const token = location.search.replace('?token=', '');
+
+    if (token) {
+      setShowPasswordRecovery(true);
+    }
+  }, [location.search]);
+
+  if (!showPasswordRecovery) {
+    return (
+      <>
+        <Container>
+          <img src={logoImg} alt="Peguei"/>
+          
+          <h1>
+            Para recuperar sua senha você precisa utilizar o link que recebeu por e-mail!
+          </h1>
+        </Container>
+
+        <GlobalStyle />
+      </>
+    );
+  }
+
   return (
-    <Container>
-      <img src={logoImg} alt="Peguei"/>
+    <>
+      <Container>
+        <img src={logoImg} alt="Peguei"/>
 
-      <h1>Redefinir a senha</h1>
+        <h1>Redefinir a senha</h1>
 
-      <Form ref={formRef} onSubmit={handleSubmit}>
-        <Input
-          type="password"
-          icon={FiLock}
-          name="password"
-          placeholder="Nova senha"
-        />
+        <Form ref={formRef} onSubmit={handleSubmit}>
+          <Input
+            type="password"
+            icon={FiLock}
+            name="password"
+            placeholder="Nova senha"
+          />
 
-        <Input
-          type="password"
-          icon={FiLock}
-          name="password_confirmation"
-          placeholder="Confirmar senha"
-        />
+          <Input
+            type="password"
+            icon={FiLock}
+            name="password_confirmation"
+            placeholder="Confirmar senha"
+          />
 
-        <Button type="submit">Resetar senha</Button>
-      </Form>
-    </Container>
+          <Button type="submit">Resetar senha</Button>
+        </Form>
+      </Container>
+
+      <GlobalStyle />
+    </>
   );
 }
 
